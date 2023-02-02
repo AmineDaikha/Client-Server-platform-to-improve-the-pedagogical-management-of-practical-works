@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane fx:id="messageriePane" prefHeight="447.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MessagerieController">
+   <children>
+      <AnchorPane fx:id="messagesMainView" layoutX="4.0" layoutY="4.0">
+         <children>
+            <ScrollPane fx:id="messagesScrool" prefHeight="395.0" prefWidth="545.0">
+               <content>
+                  <VBox fx:id="messagesBox" prefWidth="525.0" spacing="5.0">
+                     <padding>
+                        <Insets left="12.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ScrollPane>
+            <TextArea fx:id="messageArea" layoutY="403.0" prefHeight="38.0" prefWidth="453.0" />
+            <JFXButton fx:id="send" contentDisplay="GRAPHIC_ONLY" layoutX="415.0" layoutY="406.0" onAction="#sendMsg" prefHeight="32.0" prefWidth="32.0" ripplerFill="#ffffff00" style="-fx-background-color: #ffffff00;" text="Send" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/View/Styles/send2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="exporterMsgs" contentDisplay="GRAPHIC_ONLY" layoutX="462.0" layoutY="406.0" onAction="#exporterLesMessages" prefHeight="32.0" prefWidth="38.0">
+               <graphic>
+                  <FontAwesomeIconView fill="#c1cd9d" glyphName="HISTORY" size="18" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="ShowUsers" contentDisplay="GRAPHIC_ONLY" layoutX="514.0" layoutY="409.0" onAction="#showUsersList" prefHeight="32.0" prefWidth="32.0" text="show">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/View/Styles/hum1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ScrollPane fx:id="scrollUsersListe" layoutX="601.0" prefHeight="405.0" prefWidth="240.0">
+         <content>
+            <VBox fx:id="UsersListe" prefWidth="225.0" spacing="2.0">
+               <children>
+                  <Pane prefHeight="385.0" prefWidth="215.0">
+                     <children>
+                        <TextFlow layoutX="16.0" layoutY="174.0" lineSpacing="20.0" prefHeight="97.0" prefWidth="200.0" textAlignment="CENTER">
+                           <children>
+                              <Text fill="#5176dd" strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun utilisateur est connecté" wrappingWidth="192.66796875">
+                                 <font>
+                                    <Font name="Tw Cen MT" size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </TextFlow>
+                        <JFXSpinner layoutX="99.0" layoutY="120.0" radius="14.0" />
+                     </children>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EtudiantPaneController">
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="530.0" spacing="5.0" style="-fx-background-color: #dee6f810;">
+         <children>
+            <FontAwesomeIconView fill="#1587b000" glyphName="USER" lineSpacing="1.0" size="20" stroke="#227594">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <Circle fx:id="etatEtudiant" fill="#a7acb0ef" radius="6.0" stroke="#a7acb1" strokeType="INSIDE" />
+            <Label fx:id="nomPrenom" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="290.0" text="Label">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="2.0" />
+               </HBox.margin>
+            </Label>
+            <JFXButton fx:id="modifier" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#modifierEtudiant" prefHeight="11.0" prefWidth="14.0" text="modifier">
+               <graphic>
+                  <FontAwesomeIconView fill="#ffffff00" fontSmoothingType="LCD" glyphName="EDIT" size="16" stroke="#7771a8" strokeType="INSIDE" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="afficherEspaceDeTravaile" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="510.0" layoutY="18.0" onAction="#afficherWS" prefHeight="13.0" prefWidth="16.0" ripplerFill="#5bbaa0" text="afficherEspaceDeTravaile">
+               <graphic>
+                  <FontAwesomeIconView fill="#ffffff00" fontSmoothingType="LCD" glyphName="FOLDER_OPEN_ALT" size="16" stroke="#5bbaa0" strokeType="INSIDE" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="viewEtd" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="520.0" layoutY="18.0" onAction="#showEtudBureau" prefHeight="8.0" prefWidth="10.0" ripplerFill="#79c1c6" text="déconnecter">
+               <graphic>
+                  <FontAwesomeIconView fill="#ffffff00" fontSmoothingType="LCD" glyphName="EYE" size="16" stroke="#79c1c6" strokeType="INSIDE" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="supprimerEtudiant" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="465.0" layoutY="18.0" onAction="#deleteEtudiant" prefHeight="17.0" prefWidth="20.0" ripplerFill="#ee511c" text="supprimerEtudiant">
+               <graphic>
+                  <FontAwesomeIconView fill="#ed511ca1" fontSmoothingType="LCD" glyphName="CLOSE" size="16" stroke="#ee511c" strokeLineCap="BUTT" strokeType="INSIDE" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="déconnecter" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="542.0" layoutY="16.0" onAction="#disconnect" prefHeight="2.0" prefWidth="3.0" ripplerFill="#949757" text="déconnecter">
+               <graphic>
+                  <FontAwesomeIconView fx:id="deconnect" fill="#ffffff00" fontSmoothingType="LCD" glyphName="SIGN_OUT" size="16" stroke="#949757" strokeType="INSIDE" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="530.0">
+         <children>
+            <Pane prefHeight="20.0" prefWidth="345.0">
+               <children>
+                  <FontAwesomeIconView fill="#77a192" glyphName="AT" layoutY="14.0" />
+                  <Label fx:id="IPaddress" layoutX="16.0" text="n'est pas connecté" />
+               </children>
+            </Pane>
+            <Label text="Etat :" />
+            <Label fx:id="statEtudiant" text="n'est pas connecté">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="8.0" right="20.0" />
+         </padding>
+      </HBox>
+      <Line endX="100.0" startX="-422.0" stroke="#4690b9" strokeLineCap="ROUND" />
+   </children>
+</VBox>

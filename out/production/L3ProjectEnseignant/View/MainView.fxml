@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="498.0" prefWidth="1185.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainViewController">
+   <children>
+      <AnchorPane fx:id="mainView" layoutX="-2.0" layoutY="38.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="720.0" style="-fx-background-color: dfdfdd;">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="2.0" layoutY="-38.0" maxWidth="170.0" minWidth="-Infinity" prefHeight="498.0" prefWidth="170.0" spacing="20.0" style="-fx-background-color: #00384d;">
+               <children>
+                  <ImageView fitHeight="79.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Styles/AppLogoaAMMELIORE.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Line endX="100.0" startX="-60.0" stroke="#0f5d72" strokeLineCap="ROUND" strokeWidth="2.5">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Line>
+                  <VBox fx:id="LeftMenue" prefHeight="240.0" prefWidth="159.0">
+                     <children>
+                        <JFXButton fx:id="gestionDesEtudiant" alignment="CENTER" cache="true" contentDisplay="TOP" graphicTextGap="6.0" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#uploadGestionDesEtudiant" prefHeight="65.0" prefWidth="170.0" ripplerFill="#155a6b" text="Gestion Des Etudiant" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="MS Reference Specialty" size="15.0" />
+                           </font>
+                           <graphic>
+                              <Pane prefHeight="30.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="52.0" layoutX="35.0" layoutY="1.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Styles/agencies.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="gestionTravaille" alignment="CENTER" cache="true" contentDisplay="TOP" graphicTextGap="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#gestionDeTravaille" prefHeight="65.0" prefWidth="170.0" ripplerFill="#155a6b" text="Gestion Des TPs" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="MS Reference Specialty" size="15.0" />
+                           </font>
+                           <graphic>
+                              <Pane prefHeight="19.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="22.0" layoutX="38.0" nodeOrientation="INHERIT" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Styles/file.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="messagrie" alignment="CENTER" cache="true" contentDisplay="TOP" graphicTextGap="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#getstionMessagerie" prefHeight="65.0" prefWidth="170.0" ripplerFill="#155a6b" text="Messagerie" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font name="MS Reference Specialty" size="15.0" />
+                           </font>
+                           <graphic>
+                              <Pane prefHeight="16.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="18.0" fitWidth="21.0" layoutX="33.0" nodeOrientation="INHERIT" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Styles/letter.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </graphic>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="deconnect" alignment="CENTER" cache="true" contentDisplay="TOP" graphicTextGap="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logout" prefHeight="65.0" prefWidth="170.0" ripplerFill="#155a6b" text="Déconnecté" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="MS Reference Specialty" size="15.0" />
+                           </font>
+                           <graphic>
+                              <Pane prefHeight="19.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="39.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Styles/shutdown.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <AnchorPane fx:id="body" layoutX="170.0" prefHeight="460.0" prefWidth="550.0" />
+         </children>
+      </AnchorPane>
+      <Pane fx:id="ConfirmPane" layoutX="900.0" layoutY="150.0" prefHeight="156.0" prefWidth="285.0" style="-fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="57.0" layoutX="11.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/View/Styles/idea.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="annluer" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="201.0" layoutY="90.0" onAction="#AnnulerDéconnecté" prefHeight="45.0" prefWidth="45.0" ripplerFill="#c95050" style="-fx-background-radius: 100%; -fx-border-radius: 100%; -fx-border-color: red;" text="Button" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/View/Styles/error2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="yseDelete" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="113.0" layoutY="90.0" onAction="#Déconnectez" prefHeight="45.0" prefWidth="45.0" ripplerFill="#31c99c" style="-fx-border-radius: 200%; -fx-border-radius: 100%; -fx-border-color: green;">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/View/Styles/success.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Text fill="#575454" layoutX="74.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous etes sure que vous voulez Déconnecté" textAlignment="CENTER" wrappingWidth="210.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="550.0" style="-fx-background-color: #00384d;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="241.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Styles/id-card-3.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="usernameMainView" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="18.0" prefWidth="185.0" text="UserName" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="MS Reference Specialty" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <JFXButton fx:id="Notification" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="496.0" layoutY="6.0" onAction="#LoadNotification" textFill="#ff5757">
+               <graphic>
+                  <FontAwesomeIconView fill="#f54747" glyphName="BELL" rotate="-10.0" size="18" />
+               </graphic>
+            </JFXButton>
+         </children></Pane>
+   </children>
+</AnchorPane>

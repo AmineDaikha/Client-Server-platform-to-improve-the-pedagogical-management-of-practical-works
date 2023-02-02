@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="body" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionTravailleController">
+   <children>
+      <HBox>
+         <children>
+            <JFXButton fx:id="TPs" graphicTextGap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#gestionTPs" prefHeight="40.0" prefWidth="180.0" ripplerFill="#936d6d" text="Mes Fichiers" textFill="#725a5a">
+               <graphic>
+                  <FontAwesomeIconView fill="#946d6d00" glyphName="FILE_ALT" size="17" stroke="#946d6d" strokeType="INSIDE" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Projets" alignment="CENTER" graphicTextGap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#gestionProjets" prefHeight="40.0" prefWidth="180.0" text="Projets">
+               <graphic>
+                  <FontAwesomeIconView fill="#8d7f7f" glyphName="CODE" size="17" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="AnchorPaneOf" layoutX="1.0" layoutY="50.0" prefHeight="410.0" prefWidth="550.0" />
+   </children>
+</AnchorPane>

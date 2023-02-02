@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="gestionDeSceanceParent" prefHeight="836.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionDeSceanceController">
+   <children>
+      <AnchorPane fx:id="Etudiants" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="550.0" style="-fx-background-color: dfdfdd;" styleClass="root" stylesheets="@/View/Styles/InterfaceEtudiant.css">
+         <children>
+            <ScrollPane fx:id="etudiantScroll" layoutX="4.0" layoutY="102.0" prefHeight="344.0" prefWidth="543.0" style="-fx-background-radius: 3;" styleClass="root" stylesheets="@/View/Styles/InterfaceEtudiant.css">
+               <content>
+                  <VBox fx:id="etudiantsBox" spacing="5.0">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding></VBox>
+               </content>
+            </ScrollPane>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="9.0" prefHeight="46.0" prefWidth="543.0" style="-fx-background-color: #6495ED; -fx-background-radius: 3;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="30.0" />
+               </font>
+            </Label>
+            <Text fx:id="Time" fill="WHITE" fontSmoothingType="LCD" layoutX="224.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19 : 19 : 19">
+               <font>
+                  <Font name="Segoe UI Light" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="226.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HR" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Segoe UI Light" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="263.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Segoe UI Light" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="302.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEC" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Segoe UI Light" size="16.0" />
+               </font>
+            </Text>
+            <Pane layoutX="3.0" layoutY="57.0" prefHeight="45.0" prefWidth="543.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="453.0" layoutY="3.0" spacing="20.0">
+                     <children>
+                        <JFXButton fx:id="ajouterEtudiant" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#afficherFormulaireEtudiant" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100; -fx-border-radius: 100;" styleClass="Submit" stylesheets="@/View/Styles/CreateClientAccountStylesheet.css">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="14" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="ListeDesAbsence" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#RecuperePresence" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: #6495ED;" styleClass="Submit" stylesheets="@/View/Styles/CreateClientAccountStylesheet.css">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="LIST" size="14" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <Label fx:id="labelGroupe" layoutX="14.0" layoutY="9.0" textFill="#4c4cd7">
+                     <font>
+                        <Font name="Microsoft YaHei UI" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="formulaireAjouterEtudiant" layoutX="124.0" layoutY="544.0" prefHeight="330.0" prefWidth="302.0" style="-fx-background-color: eeeaf2; -fx-background-radius: 3; -fx-background-radius: 3; -fx-border-color: e1d1f1;">
+         <children>
+            <VBox layoutY="-3.0" prefHeight="305.0" prefWidth="302.0">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="260.0">
+                     <children>
+                        <JFXTextField fx:id="NumCarteAjouterField" labelFloat="true" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" promptText="Num de Carte" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane layoutX="31.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="260.0">
+                     <children>
+                        <JFXTextField fx:id="nomEtudiantAjouterField" labelFloat="true" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" promptText="NomEtudiant" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane layoutX="31.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="260.0">
+                     <children>
+                        <JFXTextField fx:id="PrenomEtudiantAjouterField" labelFloat="true" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" promptText="PrenomEtudiant" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="260.0">
+                     <children>
+                        <JFXButton fx:id="Ajouter" layoutX="90.0" onAction="#AjouterEtu" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #3bb0ea;" text="Ajouter" textFill="WHITE" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </VBox>
+            <ImageView fx:id="closeButtonAjouter" fitHeight="21.0" fitWidth="22.0" layoutX="283.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/View/Styles/error.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="etatAjout" layoutX="137.0" layoutY="294.0" textFill="#d6582c" />
+         </children>
+      </Pane>
+      <Pane fx:id="formulaireEditEtudiant" layoutX="124.0" layoutY="544.0" prefHeight="330.0" prefWidth="302.0" style="-fx-background-color: eeeaf2; -fx-border-radius: 3; -fx-border-color: e1d1f1; -fx-background-radius: 3;">
+         <children>
+            <VBox layoutY="-3.0" prefHeight="305.0" prefWidth="302.0">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="260.0">
+                     <children>
+                        <JFXTextField fx:id="NumCarte" labelFloat="true" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" promptText="Num de Carte" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane layoutX="31.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="260.0">
+                     <children>
+                        <JFXTextField fx:id="nomEtudiantField" labelFloat="true" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" promptText="NomEtudiant" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane layoutX="31.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="260.0">
+                     <children>
+                        <JFXTextField fx:id="PrenomEtudiantField" labelFloat="true" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" promptText="PrenomEtudiant" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="260.0">
+                     <children>
+                        <JFXButton fx:id="modifier" layoutX="90.0" onAction="#modifierEtd" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #3bb0ea;" text="Modifier" textFill="WHITE" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </VBox>
+            <ImageView fx:id="closeButtonEditer" fitHeight="21.0" fitWidth="22.0" layoutX="283.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/View/Styles/error.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="etatedit" layoutX="123.0" layoutY="294.0" textFill="#d6582c" />
+         </children>
+      </Pane>
+      <Pane fx:id="ConfirmPane" layoutX="610.0" layoutY="125.0" prefHeight="156.0" prefWidth="285.0" style="-fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="57.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/View/Styles/idea.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="CancelDelete" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="201.0" layoutY="90.0" onAction="#AnnulerSuppression" prefHeight="45.0" prefWidth="45.0" ripplerFill="#c95050" style="-fx-background-radius: 100%; -fx-border-radius: 100%; -fx-border-color: red;" text="Button" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/View/Styles/error2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="yseDelete" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="113.0" layoutY="90.0" onAction="#suppressionConfirmer" prefHeight="45.0" prefWidth="45.0" ripplerFill="#31c99c" style="-fx-border-radius: 200%; -fx-border-radius: 100%; -fx-border-color: green;">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/View/Styles/success.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Text fill="#575454" layoutX="74.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voulez vous supprimer cette etudiant?" textAlignment="CENTER" wrappingWidth="210.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="wsPane" layoutX="539.0" layoutY="544.0" prefHeight="330.0" prefWidth="312.0" style="-fx-background-color: #eeeaf2;">
+         <children>
+            <Label fx:id="nomEtdws" layoutX="18.0" layoutY="2.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="28.0" text="Label" textFill="#4e4f68">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </Label>
+            <ScrollPane layoutY="32.0" maxHeight="302.0" minHeight="262.0" prefHeight="262.0" prefWidth="312.0" style="-fx-background-color: #eeeaf2;">
+               <content>
+                  <VBox fx:id="wsBox" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="302.0" spacing="2.0" style="-fx-background-radius: 3; -fx-background-color: eeeaf2; -fx-border-color: e1d1f1; -fx-border-radius: 3;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </VBox>
+               </content>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </ScrollPane>
+            <ImageView fx:id="closeButtonWS" fitHeight="21.0" fitWidth="22.0" layoutX="294.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/View/Styles/error.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="downloadAll" graphicTextGap="10.0" layoutX="83.0" layoutY="294.0" onAction="#telechargertout" prefHeight="31.0" prefWidth="146.0" text="Download All" textFill="#47b8b6">
+               <graphic>
+                  <FontAwesomeIconView fill="#47b8b6" glyphName="DOWNLOAD" size="16" />
+               </graphic>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane fx:id="notConnectedPane" layoutX="610.0" layoutY="304.0" prefHeight="144.0" prefWidth="260.0">
+         <children>
+            <Text layoutX="76.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etudiant non connecté" textAlignment="CENTER" wrappingWidth="146.05078125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="getIt" layoutX="83.0" layoutY="98.0" onAction="#hideNotConnectedPane" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #3bb0ea;" text="OK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></JFXButton>
+            <FontAwesomeIconView fill="#ee7045" glyphName="USER_TIMES" layoutX="41.0" layoutY="52.0" size="30" />
+         </children>
+      </Pane>
+      <Pane fx:id="alert" layoutX="894.0" layoutY="195.0" prefHeight="144.0" prefWidth="260.0">
+         <children>
+            <FontAwesomeIconView fill="#5dd487e4" glyphName="CHECK_SQUARE_ALT" layoutX="102.0" layoutY="51.0" size="60" stroke="#5dd487" strokeLineCap="BUTT" strokeLineJoin="ROUND" strokeType="INSIDE" />
+            <Text fill="#5ed688" layoutX="36.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opération est effectuée">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="alertHndelBtn" layoutX="98.0" layoutY="103.0" mnemonicParsing="false" onAction="#hndelAlert" prefHeight="27.0" prefWidth="65.0" style="-fx-background-color: transparent; -fx-border-color: #5ed688; -fx-border-radius: 100%; -fx-background-radius: 100%;" text="OK" textFill="#5ed688" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

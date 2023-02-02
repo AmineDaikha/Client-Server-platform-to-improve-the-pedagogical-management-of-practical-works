@@ -1,0 +1,22 @@
+.root {
+    -fx-background-color: #ebebe0;
+}
+
+.drawer {
+    -fx-background-color: #373e48;
+    /*#004d4d*/
+}
+
+.drawerbtns {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-family: Century-Gothic;
+    -fx-background-radius: 0px;
+}
+
+.drawerbtns:hover {
+    -fx-background-color: #509092;
+    /*
+    -fx-background-color: #373e48, #ee543a;
+    -fx-background-insets: 0, 0 0 2 0;*/
+}

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="gestionDesGroupesParent" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionDesGroupesController">
+   <children>
+      <AnchorPane fx:id="groups" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="550.0" style="-fx-background-color: dfdfdd;" styleClass="root" stylesheets="@/View/Styles/InterfaceEtudiant.css">
+         <children>
+            <ScrollPane fx:id="groupsPane" layoutX="10.0" layoutY="4.0" prefHeight="397.0" prefWidth="530.0" styleClass="root" stylesheets="@/View/Styles/InterfaceEtudiant.css">
+               <content>
+                  <VBox fx:id="groupsBox" spacing="10.0" />
+               </content>
+            </ScrollPane>
+            <JFXButton fx:id="ajouterGroupe" layoutX="10.0" layoutY="409.0" onAction="#afficherFormulaireDeGroupe" prefHeight="37.0" prefWidth="530.0" styleClass="Submit" stylesheets="@/View/Styles/CreateClientAccountStylesheet.css" text="Ajouter Un Groupe">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="formulaireGroupe" layoutX="124.0" layoutY="540.0" prefHeight="342.0" prefWidth="302.0">
+         <children>
+            <VBox layoutY="1.0" prefHeight="342.0" prefWidth="302.0" style="-fx-background-radius: 3; -fx-background-color: eeeaf2; -fx-border-color: e1d1f1; -fx-border-radius: 3;">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="260.0">
+                     <children>
+                        <JFXTextField fx:id="numGroupe" labelFloat="true" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" promptText="Num de groupe" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="260.0">
+                     <children>
+                        <JFXComboBox fx:id="spécialité" layoutY="-3.0" prefHeight="35.0" prefWidth="260.0" promptText="Spécialité" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="260.0">
+                     <children>
+                        <JFXComboBox fx:id="module" prefHeight="35.0" prefWidth="260.0" promptText="Module" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="260.0">
+                     <children>
+                        <JFXButton fx:id="ajouter" layoutX="90.0" onAction="#ajouterGroupe" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #3bb0ea;" text="Ajouter" textFill="WHITE" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane prefHeight="45.0" prefWidth="300.0">
+                     <children>
+                        <Label fx:id="CantAdd" alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="9.0" textFill="#d72d2d" />
+                     </children>
+                  </Pane>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </VBox>
+            <ImageView fx:id="closeButton" fitHeight="21.0" fitWidth="22.0" layoutX="283.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/View/Styles/error.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="formulaireEditGroupe" layoutX="124.0" layoutY="540.0" prefHeight="342.0" prefWidth="302.0">
+         <children>
+            <VBox layoutY="-3.0" prefHeight="342.0" prefWidth="302.0" style="-fx-background-radius: 3; -fx-background-color: eeeaf2; -fx-border-color: e1d1f1; -fx-border-radius: 3;">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="260.0">
+                     <children>
+                        <JFXTextField fx:id="numGroupeEditer" labelFloat="true" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="260.0" promptText="Num de groupe" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="260.0">
+                     <children>
+                        <JFXComboBox fx:id="spécialitéEditer" layoutY="-3.0" prefHeight="35.0" prefWidth="260.0" promptText="Spécialité" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="260.0">
+                     <children>
+                        <JFXComboBox fx:id="moduleEditer" prefHeight="35.0" prefWidth="260.0" promptText="Module" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="260.0">
+                     <children>
+                        <JFXButton fx:id="modifier" layoutX="90.0" onAction="#modifierGroupe" prefHeight="33.0" prefWidth="81.0" style="-fx-background-color: #3bb0ea;" text="Modifier" textFill="WHITE" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane prefHeight="34.0" prefWidth="300.0">
+                     <children>
+                        <Label fx:id="CantEdit" alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="9.0" textFill="#d72d2d" />
+                     </children>
+                  </Pane>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </VBox>
+            <ImageView fx:id="closeButtonEditer" fitHeight="21.0" fitWidth="22.0" layoutX="283.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/View/Styles/error.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="ConfirmPane" layoutX="600.0" layoutY="115.0" prefHeight="156.0" prefWidth="285.0" style="-fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="57.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/View/Styles/idea.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="CancelDelete" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="201.0" layoutY="90.0" onAction="#AnnulerSuppression" prefHeight="45.0" prefWidth="45.0" ripplerFill="#c95050" style="-fx-background-radius: 100%; -fx-border-radius: 100%; -fx-border-color: red;" text="Button" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/View/Styles/error2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="yseDelete" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="113.0" layoutY="90.0" onAction="#suppressionConfirmer" prefHeight="45.0" prefWidth="45.0" ripplerFill="#31c99c" style="-fx-border-radius: 200%; -fx-border-radius: 100%; -fx-border-color: green;">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/View/Styles/success.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Text fill="#575454" layoutX="74.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voulez vous supprimer cette groupe?" textAlignment="CENTER" wrappingWidth="210.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="alert" layoutX="899.0" layoutY="195.0" prefHeight="144.0" prefWidth="260.0">
+         <children>
+            <FontAwesomeIconView fill="#5dd487e4" glyphName="CHECK_SQUARE_ALT" layoutX="102.0" layoutY="51.0" size="60" stroke="#5dd487" strokeLineCap="BUTT" strokeLineJoin="ROUND" strokeType="INSIDE" />
+            <Text fill="#5ed688" layoutX="36.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opération est effectuée">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="alertHndelBtn" layoutX="98.0" layoutY="103.0" mnemonicParsing="false" onAction="#hndelAlert" prefHeight="27.0" prefWidth="65.0" style="-fx-background-color: transparent; -fx-border-color: #5ed688; -fx-border-radius: 100%; -fx-background-radius: 100%;" text="OK" textFill="#5ed688" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

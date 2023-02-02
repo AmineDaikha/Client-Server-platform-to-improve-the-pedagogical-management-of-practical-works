@@ -1,0 +1,32 @@
+.root {
+    -fx-background-color: #00384d;
+    -fx-background-image: url(bg3.png);
+}
+
+.Lable {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.textField {
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #d3d3d3;
+}
+
+.Login {
+    -fx-background-color: #04B45F;
+    -fx-border: solid 1px #04B45F;
+    -fx-border-radius: 0px 0px 0px 0px;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-family: Century-Gothic;
+}
+
+.SignUp {
+    -fx-background-color: #a33300;
+    -fx-border: solid 1px #a33300;
+    -fx-border-radius: 0px 0px 0px 0px;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-family: Century-Gothic;
+}

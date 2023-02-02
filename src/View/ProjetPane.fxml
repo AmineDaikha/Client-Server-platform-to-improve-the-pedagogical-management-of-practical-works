@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="Projet" alignment="CENTER" style="-fx-background-color: #dddddd;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProjetPaneController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="525.0" spacing="5.0">
+         <children>
+            <FontAwesomeIconView fill="#ffffff00" glyphName="USER" size="20" stroke="#4479c3f7" />
+            <Label fx:id="nomPrenomUsernameEtd" prefHeight="19.0" prefWidth="284.0" text="Label" textFill="#282746">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#4479c3" glyphName="CLOCK_ALT" size="14" />
+            <Label fx:id="date_time" prefHeight="19.0" prefWidth="163.0" text="Label" textFill="#4479c3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="525.0" spacing="5.0" style="-fx-background-color: #dddddd;">
+         <children>
+            <Label prefHeight="17.0" prefWidth="16.0" text="TP" textFill="#282746">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="TPname" prefHeight="19.0" prefWidth="275.0" text="Label" textFill="#282746">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <Line endX="100.0" startX="-420.0" stroke="#0d3b5163" strokeWidth="2.0" />
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="525.0" spacing="5.0" style="-fx-background-color: #dddddd;">
+         <children>
+            <Label fx:id="nomProjet" prefHeight="19.0" prefWidth="420.0" text="Label" textFill="#282746">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <JFXButton fx:id="download" contentDisplay="GRAPHIC_ONLY" graphicTextGap="6.0" layoutX="454.0" layoutY="13.0" prefHeight="23.0" prefWidth="29.0" ripplerFill="#ee511c" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#db8d2706" glyphName="DOWNLOAD" size="18" stroke="#4ac2aef2" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="supprimerProjet" contentDisplay="GRAPHIC_ONLY" graphicTextGap="6.0" onAction="#afficherSupprimerConfirmation" prefHeight="23.0" prefWidth="29.0" ripplerFill="#ee511c" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#dd9127" glyphName="TRASH_ALT" size="18" stroke="#48c2af00" strokeType="INSIDE" />
+               </graphic>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

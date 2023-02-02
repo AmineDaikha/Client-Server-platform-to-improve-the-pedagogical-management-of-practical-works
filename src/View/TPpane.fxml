@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="TP" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="525.0" spacing="5.0" style="-fx-background-color: #dddddd;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TPPaneController">
+   <children>
+      <Label fx:id="FichierType" prefHeight="17.0" prefWidth="129.0">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </Label>
+      <Label fx:id="TPLabel" prefHeight="19.0" prefWidth="444.0" text="Label" textFill="#282746">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </Label>
+      <JFXButton fx:id="deleteTP" contentDisplay="GRAPHIC_ONLY" graphicTextGap="6.0" onAction="#deleteTP" prefHeight="23.0" prefWidth="29.0" ripplerFill="#ee511c" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Bold" size="13.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#ffffff00" glyphName="TRASH_ALT" size="16" stroke="#ee511c" strokeType="INSIDE" />
+         </graphic>
+      </JFXButton>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</HBox>

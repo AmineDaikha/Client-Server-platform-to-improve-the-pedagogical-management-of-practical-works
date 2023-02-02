@@ -1,0 +1,46 @@
+.root {
+    -fx-background-color: #00384d;
+    -fx-background-image: url(bg3.png);
+}
+
+
+.Submit {
+    -fx-background-color: #04B45F;
+    -fx-border: solid 1px #04B45F;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-family: Century-Gothic;
+}
+
+.HaveAcount {
+    -fx-background-color: #a33300;
+    -fx-border: solid 1px #a33300;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-family: Century-Gothic;
+}
+
+.combobox {
+    -fx-text-fill-color: white;
+}
+
+.validator {
+    -fx-text-fill-color: red;
+    -fx-color: red;
+    -fx-fill: red;
+    -fx-fill-color: red;
+    -fx-font-color: red;
+    -fx-text-fill: white;
+}
+
+.textField {
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #d3d3d3;
+}
+
+.error * {
+    -fx-text-fill-color: red;
+    -fx-color: red;
+    -fx-fill: red;
+    -fx-font-color: red;
+}

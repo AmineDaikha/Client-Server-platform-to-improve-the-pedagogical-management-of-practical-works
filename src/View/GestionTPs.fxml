@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="410.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionTPController">
+   <children>
+      <AnchorPane fx:id="gestionDesTPPane" layoutX="1.0" layoutY="2.0" prefHeight="410.0" prefWidth="550.0">
+         <children>
+            <Label layoutX="29.0" layoutY="14.0" text="Mes Fichiers">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="TpsScroll" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="550.0">
+               <content>
+                  <VBox fx:id="TpsBox" spacing="5.0">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding></VBox>
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER_LEFT" layoutX="7.0" layoutY="346.0" prefHeight="38.0" prefWidth="533.0" spacing="5.0">
+               <children>
+                  <JFXButton fx:id="ajouterTP" disable="true" graphicTextGap="8.0" onAction="#AjouterTP" prefHeight="38.0" prefWidth="132.0" ripplerFill="#52c981" style="-fx-background-color: #52c981;" text="Ajouter Fichier" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLUS_CIRCLE" size="14" stroke="#ffffff5f" strokeType="INSIDE" />
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-5.0" left="-10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXComboBox fx:id="typeFichierComboBox" onAction="#CheckEntry" prefHeight="35.0" prefWidth="122.0" promptText="Type Fichier" />
+                  <JFXTextField fx:id="chemin" focusColor="#407ea8" maxWidth="359.0" minWidth="230.0" prefHeight="35.0" prefWidth="250.0" promptText="Chemin de fichier" />
+                  <JFXButton fx:id="parcourir" onAction="#choisirFichier" prefHeight="31.0" prefWidth="36.0" text="..." />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="ConfirmPane" layoutX="900.0" layoutY="120.0" prefHeight="156.0" prefWidth="285.0" style="-fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="57.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/View/Styles/idea.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="CancelDelete" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="201.0" layoutY="90.0" onAction="#AnnulerSuppression" prefHeight="45.0" prefWidth="45.0" ripplerFill="#c95050" style="-fx-background-radius: 100%; -fx-border-radius: 100%; -fx-border-color: red;" text="Button" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/View/Styles/error2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="yseDelete" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="113.0" layoutY="90.0" onAction="#suppressionConfirmer" prefHeight="45.0" prefWidth="45.0" ripplerFill="#31c99c" style="-fx-border-radius: 200%; -fx-border-radius: 100%; -fx-border-color: green;">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/View/Styles/success.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Text fill="#575454" layoutX="74.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voulez vous supprimer cette groupe?" textAlignment="CENTER" wrappingWidth="210.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
